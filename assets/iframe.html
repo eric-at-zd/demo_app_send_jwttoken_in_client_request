@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+
+  <body>
+    <h2>Test Sending JWT token</h2><br />
+    <button onClick="buttonPress()">Press to send JWT</button>
+    <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+    <script>
+      let client = ZAFClient.init();
+      client.invoke('resize', { width: '100%', height: '200px' });
+
+
+
+      async function buttonPress() {
+        try {
+          const req = await client.metadata()
+          let serverUrl = req.settings.serverUrl
+
+          async function urlFixer() {
+            if (serverUrl.indexOf("https://") === -1 || serverUrl.indexOf("/example") === -1) {
+              if (serverUrl.indexOf("https://") === -1) {
+                serverUrl = "https://" + serverUrl;
+              }
+              if (serverUrl.indexOf("/example") === -1) {
+                serverUrl = serverUrl + "/example";
+              }
+            }
+            return serverUrl
+          }
+
+          const cleanedUrl = await urlFixer()
+
+          let options = {
+            url: cleanedUrl,
+            headers: {
+              'Authorization': 'JWT {{jwt.token}}'
+            },
+            contentType: 'application/json',
+            secure: true,
+            jwt: {
+              algorithm: 'HS256',
+              secret_key: 'some_shared_secret',
+              expiry: 3600,
+              claims: {
+                // EXAMPLE: Your own custom private claims
+                nam: 'my custom name',
+                cs1: 1,
+                cs2: 'hello',
+                // Registered/standard claims
+                iat: 1372113305,
+                jti: '8883362531196.326',
+                iss: 'some_subdomain',
+              }
+            },
+            type: 'POST',
+            dataType: 'json'
+          };
+          client.request(options).then((response) => {
+            client.invoke('notify', 'Success! Your JWT request was successful. See the console for more details', 'notify', 1000)
+            console.group(response);
+          });
+        } catch (err) {
+          client.invoke('notify', 'JWT request failed, check the console for more details.', 'error', 1000)
+        }
+      }
+
+    </script>
+  </body>
+
+</html>

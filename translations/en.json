@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Send JWT Token Example",
+    "short_description": "Sends jwt.token in client.request call.",
+    "long_description": "Sends jwt.token in client.request call.",
+    "installation_instructions": "Set up a glitch app by clicking this link https://glitch.com/edit/#!/remix/defiant-caring-chestnut, Install the app in your Zendesk instance. Then put the glitch web server url in the serverUrl parameter field."
+  }
+}
