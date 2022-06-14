@@ -119,6 +119,9 @@ dist
 # TernJS port file
 .tern-port
 
+# Temporary directory
+tmp 
+
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
@@ -131,3 +134,4 @@ dist
 
 # ZCLI 
 zcli.apps.config.json
+

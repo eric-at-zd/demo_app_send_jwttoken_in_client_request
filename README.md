@@ -10,8 +10,6 @@ It demonstrates the following:
 
 When running, bring up your browser's Console tab and Network tab to monitor the different behaviors.
 
-
-
 ## Getting started
 
 This app needs a web server for us to be able to pass the JWT request to. You can create your own copy of our example by clicking [here](https://glitch.com/edit/#!/remix/defiant-caring-chestnut). Take note of the name / url (available from the share button in the upper right hand corner) of the web server as you'll need this in the future steps.
@@ -28,21 +26,22 @@ Follow these steps to get a local copy of your Zendesk app up and running.
 
 1. Clone the repo.
 
-    ``` bash
-    git clone https://github.com/example.git
-    ```
+   ```bash
+   git clone https://github.com/example.git
+   ```
 
 2. Navigate into the directory.
 
-    ```bash
-    cd demo_app_send_jwttoken_in_client_request
-    ```
+   ```bash
+   cd demo_app_send_jwttoken_in_client_request
+   ```
 
-3. [Install the app](https://developer.zendesk.com/documentation/apps/app-developer-guide/zcli/#packaging-and-installing-a-private-zendesk-app). 
-    
-    ```bash
-    zcli apps:create .
-    ```
+3. [Install the app](https://developer.zendesk.com/documentation/apps/app-developer-guide/zcli/#packaging-and-installing-a-private-zendesk-app).
+
+   ```bash
+   zcli apps:create .
+   ```
+
 4. Once the app has been installed, you'll be asked for the serverUrl. Input the glitch url from the previous steps.
 
 [Packaging and installing a private Zendesk app]()
