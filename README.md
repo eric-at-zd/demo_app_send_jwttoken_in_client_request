@@ -53,7 +53,7 @@ Follow these steps to get a local copy of your Zendesk app up and running.
 - [How ZAF client.request works](https://developer.zendesk.com/documentation/apps/getting-started/how-apps-framework-client-request-works/)
 - [Zendesk Apps Guide](https://developer.zendesk.com/documentation/apps/)
 - [Apps Support API documentation](https://developer.zendesk.com/api-reference/apps/apps-support-api/introduction/)
-- [MDN web docs for the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [JWT.io Docs](https://jwt.io/introduction)
 - [ZAF notify method](https://developer.zendesk.com/api-reference/apps/apps-support-api/all_locations/#notify)
 
 <!-- Issue reporting with link to repo issues page -->
