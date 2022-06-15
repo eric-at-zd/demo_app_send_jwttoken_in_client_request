@@ -12,7 +12,7 @@ When running, bring up your browser's Console tab and Network tab to monitor the
 
 ## Getting started
 
-This app needs a web server for us to be able to pass the JWT request to. You can create your own copy of our example by clicking [here](https://glitch.com/edit/#!/remix/defiant-caring-chestnut). Take note of the name / url (available from the share button in the upper right hand corner) of the web server as you'll need this in the future steps.
+This app needs a web server for us to be able to pass the JWT request to. You can create your own copy of our example by [signing up for a Glitch account](https://glitch.com/signup), then clicking [here](https://glitch.com/edit/#!/remix/defiant-caring-chestnut). Take note of the name / url (available by clicking the share button in the upper right hand corner when signed in) for the web server as you'll need this in the future steps.
 
 Follow these steps to get a local copy of your Zendesk app up and running.
 

@@ -62,15 +62,16 @@
             type: "POST",
             dataType: "json",
           };
-          client.request(options).then((response) => {
-            client.invoke(
-              "notify",
-              "Success! Your JWT request was successful. See the console for more details",
-              "notify",
-              1000
-            );
-            console.group(response);
-          });
+
+          const response = await client.request(options)
+
+          client.invoke(
+            "notify",
+            "Success! Your JWT request was successful. See the console for more details",
+            "notify",
+            1000
+          );
+          console.group(response);
         } catch (err) {
           client.invoke(
             "notify",
