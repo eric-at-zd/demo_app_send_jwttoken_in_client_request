@@ -27,7 +27,7 @@ Follow these steps to get a local copy of your Zendesk app up and running.
 1. Clone the repo.
 
    ```bash
-   git clone https://github.com/example.git
+   git clone https://github.com/zendesk/demo_app_send_jwttoken_in_client_request.git
    ```
 
 2. Navigate into the directory.
